@@ -1,10 +1,14 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
 
-<!--2.通过按钮点击获取用户信息-->
+<!-- 2.通过按钮点击获取用户信息 -->
 <!-- open-type 是用来说明该按钮是用来获取用户信息-->
 <button size = 'mini' 
         open-type= 'getUserInfo'
         bindgetuserinfo="handGetUserInfo">                        
         获取授权
 </button>
+
+<!-- 3.展示用户信息 -->
+<open-data type ="userNickName" ></open-data>
+<open-data type ="userAvatarUrl"></open-data>
