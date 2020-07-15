@@ -1,3 +1,4 @@
+//注册产生一个小程序 示例对象
 App({                           //小程序关闭时会在后台存活5分钟，五分钟内重新打开不会进行初始化，直接onShow
   onLaunch:function(){          //小程序初始化完成执行
    console.log("小程序初始化完成： onluanch")
@@ -25,6 +26,12 @@ App({                           //小程序关闭时会在后台存活5分钟，
 
   onError:function(msg){
     console.log("小程序发生了错误")
+  },
+
+  //全局数据
+  globalData:{
+    name:"The clown",
+    age:18
   }
 
 })
