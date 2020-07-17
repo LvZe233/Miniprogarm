@@ -1,0 +1,28 @@
+<!----------------- 1.button 的基本使用------------------->
+<button>按钮</button>
+
+<!----------------- 2.size属性：mini---------------------->
+<button size="mini">按钮</button>
+<button size="mini">按钮</button>
+
+<!------------------ 3. type属性：------------------------>
+<button size="mini" type="primary">按钮</button>
+<button size="mini" type="default">按钮</button>
+<button size="mini" type="warn">按钮</button>
+
+<!----------------- 4.plain属性：镂空效果------------------>
+<button size="mini" plain>按钮</button>
+
+<!----------------- 5.disabled属性：不可用----------------->
+<button size="mini" disabled>按钮</button>
+
+<!------------------- 6.loading属性：---------------------->
+<!---------------- 一般根据用户的点击加载而转变-------------->
+<button size="mini" loading>按钮</button>
+<button size="mini" loading="{{isloading}}">按钮</button>
+
+<!--------- 7.hover-class属性：点击时的背景相关设置---------->
+<!------------- 该设置与wxss文件的样式设置相关--------------->
+<button hover-class="pressed">按钮</button>
+
+
