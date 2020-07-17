@@ -1,0 +1,26 @@
+<!-------------------- 1.view的基本使用 ------------------------->
+<!------------- view组件是一个容器，可以装载其他组件--------------->
+<!------------- view组件是块级元素，独占一行 ---------------------->
+<view class="box">哈哈哈</view>
+<view>呵呵呵</view>
+
+<!------ 2.hover-class属性:当用户按下按钮时显示的样式 ---------------------->
+<!------ 3.hover-satrt-time属性：按住多久后出现点击态，单位毫秒-------------->
+<!------ 4.hover-stay-time属性：手指松开后点击态保留时间，单位毫秒----------->
+<view class="box1" 
+      hover-class="hover-view"
+      hover-start-time="0"
+      hover-stay-time="500">
+    box1
+</view>
+
+<!------ 5.hover-stop-propagation属性：是否阻止本节点的祖先节点出现点击态------->
+<view class="box2" hover-class="box2-hover">
+    <view class="box1" 
+      hover-class="hover-view"
+      hover-start-time="0"
+      hover-stay-time="500"
+      hover-stop-propagation="true">
+    box1
+    </view>
+</view>
