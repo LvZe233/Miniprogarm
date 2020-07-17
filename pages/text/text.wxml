@@ -1,0 +1,23 @@
+<!---------------------- 1.基本使用方法 ---------------------->
+<text>helloworld\n</text>
+<text>你好小程序\n</text>
+
+
+<!------- 2. selectable:true 让小程序能够被长按选中 ------------>
+<!---------------- 文本默认的赋值是false------------------------>
+<text selectable = '{{true}}'> 哈哈哈哈哈\n</text>
+<text selectable> 呵呵呵呵呵\n</text>
+
+
+<!----------------- 3. space 决定文本空格大小------------------->
+<!-- nbsp:默认空格大小-->
+<!-- ensp:半个中文字符大小-->
+<!-- emsp:一个中文字符大小-->
+<text>Hello World\n</text>
+<text space= "nbsp">Hello World\n</text>
+<text space= "ensp">Hello World\n</text>
+<text space= "emsp">Hello World\n</text>
+
+
+<!------------------ 4.decode:是否解码，默认为false ------------->
+<text decode>5 &gt; 3</text>
