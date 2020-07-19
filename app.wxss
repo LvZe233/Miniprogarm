@@ -1,0 +1,8 @@
+.container{
+  color:green;
+  font-size:32px;
+}
+
+.content{
+  background: purple;
+}
