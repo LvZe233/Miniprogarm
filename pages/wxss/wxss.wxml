@@ -10,3 +10,8 @@
 
 <!-- 2.三种样式作用于同一个组件，优先级：就近原则-->
 <view style="background:red" class="content">嘻嘻嘻</view>
+
+<!-- 3.wxss中的单位：rpx （自适应适配） 在iphone6的调试环境中，1 rpx = 2 px-->
+<!-- 前端开发也需要进行尺寸的适配：em/rem/vw/vh-->
+<view class="box1"></view>
+<view class="box2"></view>
