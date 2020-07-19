@@ -1,0 +1,14 @@
+<!-- 1.wxml的格式 -->
+<!-- 大小写区分-->
+<!-- <view Class = " " class = " "></view>-->
+
+<!-- 2.Mustache语法-->
+<view>{{message}}</view>
+<view>{{firstname}} {{lastname}}</view>
+<view>{{firstname + " " + lastname}}</view>
+<view>{{age > 18 ? "成年人":'未成年人'}}</view>
+
+<view>{{nowtime}}</view>
+
+<button size = "mini" bindtap = "handleSwitchColor">按钮</button>
+<view class="box {{isActive ? 'active':' '}}">哈哈哈</view>

@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/wxml/wxml",
     "pages/wxss/wxss",
     "pages/home/home",
-    "pages/category/category",
-    "style/box.wxss"
+    "pages/category/category"
   ],
   "window": {
     "navigationBarBackgroundColor": "#ff5777",
