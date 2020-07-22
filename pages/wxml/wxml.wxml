@@ -42,3 +42,32 @@
 <view>---------------------------------</view>
 <view hidden="{{true}}">hidden属性</view>
 <view wx:if="{{false}}">wx:if判断</view>
+
+<view>---------------------------------</view>
+<!-- 1.wx:for 回顾-->
+<!-- 1.1 遍历数字/字符串/数字-->
+<!--
+  <view wx:for = "{{['abc','cba','nba']}}">{{item}} {{index}}</view>
+  <view wx:for = "the_clown">{{item}} {{index}}</view>
+  <view wx:for = "{{9}}">{{item}} {{index}}</view>
+-->
+
+<!-- 2.block标签：block并不是组件，仅仅是一个包装元素，只接受控制属性 -->
+<block wx:for = "{{3}}">
+  <button>按钮</button>
+  <view>呵呵呵</view>
+  <text>我是内容</text>
+</block>
+
+<view>------------------------------------</view>
+
+<!-- 3.item index 起名字-->
+<view wx:for ="{{movies}}" wx:for-item = "movie" wx:for-index = "i">{{movie}} {{i}}</view>
+
+<block wx:for ="{{nums}}" wx:for-item = "inner">
+  <block wx:for ="{{inner}}">
+     <view>{{item}}</view>
+  </block>
+</block>
+
+<!-- 4.key的作用：在插入元素的时候提高虚拟Dom的性能-->

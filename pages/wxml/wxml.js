@@ -9,7 +9,13 @@ Page({
     nowtime:new Date().toLocaleString(),
     isActive: false,
     isShow: true,
-    score: 59
+    score: 59,
+    movies: ["星际穿越","大话西游","海王"],
+    nums:[
+      [0,1,2,],
+      [10,11,12],
+      [21,22,23]
+    ]
   },
   onLoad(){
     setInterval(()=>{
