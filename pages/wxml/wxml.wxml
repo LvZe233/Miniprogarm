@@ -12,3 +12,33 @@
 
 <button size = "mini" bindtap = "handleSwitchColor">按钮</button>
 <view class="box {{isActive ? 'active':' '}}">哈哈哈</view>
+
+<view>-------------条件判断----------------</view>
+
+<!-- 1.wx:if的使用 -->
+<button size="mini" bindtap="handleSwitchShow">切换使用</button>
+<view wx:if = '{{isShow}}'>哈哈哈</view>
+
+<!-- 2.wx:elif 和 wx:else -->
+<button size="mini" bindtap="handleIncrement">分数加6</button>
+<view wx:if = "{{score >=90}}">优秀</view>
+<view wx:elif = "{{score >=80}}">良好</view>
+<view wx:elif = "{{score >=60}}">合格</view>
+<view wx:else>不合格</view>
+
+<!-- 3.hidden属性 -->
+<view hidden="{{true}}">我是hidden属性隐藏的内容</view>
+
+<!-- 4.wx:if 和 hidden 在隐藏方面有什么区别 -->
+<!--
+  区别：
+    hidden属性隐藏时，该组件依然存在（display：none）
+    wx:if判断的隐藏，组件不会被创建，也因此不会存在
+  选择：
+    如果隐藏与非隐藏的切换频率比较高，选择hidden
+    如果隐藏与非隐藏的切换频率不高，选择wx:if
+
+-->
+<view>---------------------------------</view>
+<view hidden="{{true}}">hidden属性</view>
+<view wx:if="{{false}}">wx:if判断</view>

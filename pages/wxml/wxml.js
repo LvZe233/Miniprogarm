@@ -7,7 +7,9 @@ Page({
     lastname:"bryant",
     age : 20,
     nowtime:new Date().toLocaleString(),
-    isActive: false
+    isActive: false,
+    isShow: true,
+    score: 59
   },
   onLoad(){
     setInterval(()=>{
@@ -19,6 +21,16 @@ Page({
   handleSwitchColor(){
     this.setData({
       isActive: !this.data.isActive
+    })
+  },
+  handleSwitchShow(){
+    this.setData({
+      isShow:!this.data.isShow
+    })
+  },
+  handleIncrement(){
+    this.setData({
+      score:this.data.score + 10
     })
   }
 })
