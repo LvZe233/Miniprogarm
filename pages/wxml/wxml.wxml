@@ -1,0 +1,24 @@
+<view>--------------template------------------</view>
+<!-- 
+  template的作用：实现小程序的复用
+  注意点：模板中的内容，在未使用前不会被进行渲染
+-->
+
+<!-- template模板不可以递归导入：a中的模板导入到b，再把b导入到c是不可行的-->
+<!-- 
+    关于wxml导入的两种方式：
+  import导入：
+    1.主要导入入template
+    2.特点：不能递归导入
+  include引入：
+    1.将公共的wxml组件抽取到一个文件中
+    2.不能导入template/wxs，可以递归导入      
+  -->
+<import src="/template/template.wxml"/>
+
+<template name="contentItem">
+  <button size="mini">{{btnText}}</button>
+  <view>{{content}}</view>
+</template>
+
+<template is="contentItem" data="{{btnText:'按钮',content:'啊哈哈'}}"/>
