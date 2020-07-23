@@ -1,0 +1,29 @@
+<!-- 1.wxs的定义方式 -->
+<!-- 1.1 直接定义在wxml文件中-->
+<wxs module="info">
+  //JS代码
+  var message = "Hello World";
+  var num = 20;
+  function sum(num1,num2){
+    return num1 + num2
+  }
+
+  //commonjs模块化导出的写法
+  module.exports={
+    message:message,
+    num:num,
+    sum:sum
+  }
+</wxs>
+
+<!-- 1.2 定义在单独的wxs文件中,再使用<wxs/>标签进行引入 -->
+<!-- 引入不能使用绝对路径-->
+
+<wxs src = "../../wxs/info.wxs" module="info"/>
+<wxs src = "../../wxs/format.wxs" module ="format"/>
+
+<view>{{info.message}}</view>
+<view>{{info.num}}</view>
+<view>{{info.sum(20,30)}}</view>
+
+<view>{{format.priceFormat(price)}}</view>

@@ -1,0 +1,14 @@
+
+  //JS代码
+  var message = "Hello World";
+  var num = 20;
+  function sum(num1,num2){
+    return num1 + num2
+  }
+
+  //commonjs模块化导出的写法
+  module.exports={
+    message:message,
+    num:num,
+    sum:sum
+  }
