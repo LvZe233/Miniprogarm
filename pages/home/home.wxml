@@ -1,2 +1,44 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.事件绑定处理的回顾 -->
+<button bindtap="handlebtnClick" size="mini">按钮</button>
+<button bind:tap="handlebtnClick" size="mini">按钮</button>
+<button catch:tap="handlebtnClick" size="mini">按钮</button>
+
+<!-- 2.常见的事件 -->
+<!-- 
+  还有 bindtouchcancle 事件，在跳转页面等特殊场景才会触发
+  在使用中:bindtap 和 bindlongpress 只会触发一个
+-->
+<view class="box"
+      bindtouchstart="handleTouchStart"
+      bindtouchmove="handleTouchMove"
+      bindtouchend="handleTouchEnd"
+      bindtap="handleTap"
+      bindlongpress="handleLongPrss">
+</view>
+
+<!-- 3.事件对象分析 -->
+<button id="btn" bindtap="handleEventClick">按钮</button>
+
+<!-- 4.事件的传递参数 -->
+<view class="container">
+  <block wx:for="{{titles}}" wx:key="index">
+    <view class="item"
+          bindtap="handleItemClick"
+          data-index="{{index}}"
+          data-title="{{item}}">
+          {{item}}</view>
+  </block>
+</view>
+
+<!-- 5.事件冒泡和事件捕获 -->
+<!-- 事件捕获从外层到内层，事件冒泡从内层到外层-->
+<!-- 
+  bind:一层层传递 
+  catch:阻止事件进一步传递
+-->
+<view class="view1" capture-catch:tap="handleCaptureView1" bindtap="handleBIndView1">
+  <view class="view2" capture-bind:tap="handleCaptureView2" bindtap="handleBIndView2">
+    <view class="view3" capture-bind:tap="handleCaptureView3" bindtap="handleBIndView3">
+    </view>
+  </view>
+</view>
