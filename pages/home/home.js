@@ -5,62 +5,27 @@ Page({
    * 页面的初始数据
    */
   data: {
-
+    counter:0
+  },
+  handleIncrement(){
+    this.setData({
+      counter:this.data.counter+1
+    })
+  },
+  handleItemClick(event){
+    console.log(event)
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
+  handleIncrementcpn(){
+    //可以使用class或者id获得组件的对象     
+    const my_sel = this.selectComponent(".sel-class")
+    // 1.通过setData直接修改组件内的数据       （ 直接修改组件内数据不规范）
+    // my_sel.setData({                          
+      // count : my_sel.data.count + 10
+    // })
 
-  },
-
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
+    // 2.通过方法对组件数据进行修改 (给一个接口来修改数据)
+    my_sel.increseCount(30)  
   }
+  
 })

@@ -1,2 +1,51 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!-- 1.使用自定义组件 -->
+<!-- 自定义组件的标签名只能是：小写字母、中划线、下划线，数字也可以-->
+<my-cpn></my-cpn>
+<my-cpn></my-cpn>
+
+<my-style/>
+
+<!-- 
+  （1）组件的wxss文件中的样式默认与使用组件的文件中的wxss样式互不影响
+  （2）若要使之间产生相互影响，需要去组件中修改js文件，加入：
+        options:{
+          styleIsolation:"shared"
+        }
+-->
+
+<!-- 2.组件内部发出事件 -->
+<view>当前计数{{counter}}</view>
+<my-event bind:Increment="handleIncrement"/>
+
+<!-- 3.tab-control 练习-->
+<tab-control titles="{{['衣服','裤子','鞋子']}}"
+             bind:itemclick="handleItemClick"/>
+
+<!-- 4.修改组件中的数值 -->
+<my-sel class="sel-class" id="sel-id"/>
+<button size="mini" bindtap="handleIncrementcpn">修改组件的数值</button>
+
+<!-- 5插槽的使用 -->
+<!-- 5.1 单个插槽的使用 -->
+<my-slot>
+  <button size="mini">我是插槽的按钮</button>
+</my-slot>
+
+<my-slot>
+  <image src="https://dss3.bdstatic.com/70cFv8Sh_Q1YnxGkpoWK1HF6hhy/it/u=2534506313,1688529724&fm=26&gp=0.jpg"/>
+</my-slot>
+
+<my-slot>
+  <slider></slider>
+</my-slot>
+
+<!-- 5.1 多个插槽的使用 -->
+<!--
+  注意事项：
+  （1）给每个插槽起个名字
+  （2）在组件的js文件中需要添加一个选项： options -> multipleSlots:true
+-->
+<my-mslot>
+  <button slot="slot2">替换slot2</button>
+  <text slot="slot1">哈哈哈哈哈哈</text>
+</my-mslot>
