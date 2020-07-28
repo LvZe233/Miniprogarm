@@ -10,3 +10,7 @@
 
 <!-- 4.wx.showActionSheet -->
 <button size="mini" bind:tap="handleShowAction">ShowAction</button>
+
+
+<!--------------------------- 小程序分享按钮 ------------------------------->
+<button size="mini" open-type="share">分享</button>

@@ -51,5 +51,8 @@ Page({
         console.log(res)
       }
     })
+  },
+  onShareAppMessage:function(options){
+    title:'分享'
   }
 })
