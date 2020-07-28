@@ -1,2 +1,12 @@
-<!--pages/home/home.wxml-->
-<text>pages/home/home.wxml</text>
+<!------------------------------ 展示弹窗 ----------------------------------->
+<!-- 1.wx.showToast -->
+<button size="mini" bind:tap="handleShowToast">ShowToast</button>
+
+<!-- 2.wx.showModal -->
+<button size="mini" bind:tap="handleShowModal">ShowModal</button>
+
+<!-- 3.wx.showLoading -->
+<button size="mini" bind:tap="handleShowLoading">ShowLoading</button>
+
+<!-- 4.wx.showActionSheet -->
+<button size="mini" bind:tap="handleShowAction">ShowAction</button>
