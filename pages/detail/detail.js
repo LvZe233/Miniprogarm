@@ -13,5 +13,10 @@ Page({
     home.setData({
       title:"呵呵呵"
     })
+  },
+  handleBack(){
+    wx.navigateBack({
+      delta:1
+    })
   }
 })

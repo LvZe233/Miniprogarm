@@ -5,3 +5,6 @@
 <navigator open-type="navigateBack">返回</navigator>
 
 <navigator url="/pages/comment/comment">跳转到评论页</navigator>
+
+<!-- 用代码进行返回 -->
+<button size="mini" bindtap="handleBack">返回</button>

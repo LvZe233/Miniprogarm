@@ -24,3 +24,6 @@
 <!-- 3.跳转过程中传递数据,页面后跟？并传入键值对，传入的数据在页面onload晟敏这个周期的options里面拿 -->
 <navigator url="/pages/detail/detail?name=clown&age=18&height=1.8" >跳到详情页</navigator>
 <view>{{title}}</view>
+
+<!-- 4.用代码进行跳转 -->
+<button size="mini" bindtap="handlePushDetail">页面跳到详情页</button>
