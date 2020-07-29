@@ -1,0 +1,7 @@
+<!--pages/detail/detail.wxml-->
+<text>pages/detail/detail.wxml</text>
+
+<!-- 页面返回 -->
+<navigator open-type="navigateBack">返回</navigator>
+
+<navigator url="/pages/comment/comment">跳转到评论页</navigator>

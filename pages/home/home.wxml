@@ -1,2 +1,26 @@
 <!--pages/home/home.wxml-->
 <text>pages/home/home.wxml</text>
+
+
+<!-- 1.navigator 页面跳转 -->
+<navigator url="/pages/detail/detail">页面跳转</navigator>
+
+<!-- 2.navigator属性：open-type -->
+<navigator url="/pages/detail/detail"
+           open-type="redirect">
+    跳转到详情页(redirect)
+</navigator>
+
+<navigator url="/pages/category/category"
+           open-type="switchTab">
+    跳转到分类页(switchTab)
+</navigator>
+
+<navigator url="/pages/category/category"
+           open-type="reLaunch">
+    跳转到分类页(reLaunch)
+</navigator>
+
+<!-- 3.跳转过程中传递数据,页面后跟？并传入键值对，传入的数据在页面onload晟敏这个周期的options里面拿 -->
+<navigator url="/pages/detail/detail?name=clown&age=18&height=1.8" >跳到详情页</navigator>
+<view>{{title}}</view>
